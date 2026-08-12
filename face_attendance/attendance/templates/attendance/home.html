@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>FACE RECOGNITION ATTENDANCE</title></head>
+<body style="background: black; color: white; text-align: center;">
+    <h1>FACE RECOGNITION ATTENDANCE</h1>
+    
+    <div style="position: relative; display: inline-block;">
+        
+        {% if countdown > 0 %}
+        <div style="position: absolute; top: 10px; left: 10px; color: #00ff00; font-size: 24px; font-weight: bold; background: rgba(0,0,0,0.7); padding: 5px 15px; border-radius: 5px; z-index: 10;">
+           attendance:{{marked_roll}}-{{marked_name}}<br> Stopping in: {{ countdown }}s
+        </div>
+        {% endif %}
+
+        <img src="{% url 'video_feed' %}" width="640">
+    </div>
+    
+    <p style="margin-top: 10px;">Scanning... Please wait, Recognising Face</p>
+</body>
+</html>
